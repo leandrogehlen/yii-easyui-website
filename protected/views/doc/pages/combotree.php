@@ -18,11 +18,10 @@ See more details <a href="http://www.jeasyui.com/documentation/Combotree.php">ht
 
 <div class="example">
 	<div class="form">
-		<div>
+		<div>	
 		<label>Directory/file</label>
 		<?php $this->widget('ext.yii-easyui.widgets.EuiCombotree', array(				
 			'style' => 'width: 200px',			
-			'checkbox' => true,
 			'url' => $this->createUrl('comboTree')		
 		));?>
 		</div>	
@@ -31,14 +30,14 @@ See more details <a href="http://www.jeasyui.com/documentation/Combotree.php">ht
 
 <h2>Widget</h2>
 
-<script type="syntaxhighlighter" class="brush: php xml; toolbar: false">
+<script type="syntaxhighlighter" class="brush: php; toolbar: false">
 <![CDATA[
 <div class="example">
 	<div class="form">
 		<div>
 		<label>Directory/file</label>
 		<?php echo "<?php "?>$this->widget('ext.yii-easyui.widgets.EuiCombotree', array(				
-			'style' => 'width: 200px',						
+			'style' => 'width: 200px',				
 			'url' => $this->createUrl('comboTree')		
 		));
 		<?php echo "?>\n" ?>
@@ -48,3 +47,27 @@ See more details <a href="http://www.jeasyui.com/documentation/Combotree.php">ht
 ]]>
 </script>
 
+<h2>Controller</h2>
+
+<script type="syntaxhighlighter" class="brush: php; toolbar: false">
+<![CDATA[
+public function actionComboTree()
+{
+	$tree = array(
+		array('id' => 1, 'text'=> 'Folder 1', 'children' => array(
+			array('id' => 2, 'text'=> 'file 1'),
+			array('id' => 3, 'text'=> 'file 2'),
+			array('id' => 4, 'text'=> 'Folder 2', 'children' => array(
+				array('id' => 7, 'text'=> 'File 3', 'iconCls' => 'icon-reload'),
+				array('id' => 8, 'text'=> 'File 4')
+			))
+		)),
+		array('id' => 4, 'text'=> 'Languages', 'children' => array(
+			array('id' => 5, 'text'=> 'Java'),
+			array('id' => 6, 'text'=> 'PHP')
+		))
+	);
+	echo CJSON::encode( $tree );
+}
+]]>
+</script>
