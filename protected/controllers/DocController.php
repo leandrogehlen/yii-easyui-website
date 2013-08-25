@@ -28,6 +28,7 @@ class DocController extends Controller
 		array('label'=> 'Form', 'items'=> array(
 			array('label'=>'Validatebox', 'url'=>array('/doc/page', 'view'=>'validatebox')),
 			array('label'=>'Combobox', 'url'=>array('/doc/page', 'view'=>'combobox')),
+			array('label'=>'Combotree', 'url'=>array('/doc/page', 'view'=>'combotree'))
 		)),
 			
 		array('label'=> 'DataGrid and Tree', 'items'=> array(
@@ -87,6 +88,25 @@ class DocController extends Controller
 	public function actionComboProducts() 
 	{
 		echo CJSON::encode( Product::model()->findAll(array('limit'=>10)) );	
+	}
+	
+	public function actionComboTree()
+	{
+		$tree = array(
+			array('id' => 1, 'text'=> 'Folder 1', 'children' => array(
+				array('id' => 2, 'text'=> 'file 1'),
+				array('id' => 3, 'text'=> 'file 2'),
+				array('id' => 4, 'text'=> 'Folder 2', 'children' => array(
+					array('id' => 7, 'text'=> 'File 3', 'iconCls' => 'icon-reload'),
+					array('id' => 8, 'text'=> 'File 4')
+				))
+			)),
+			array('id' => 4, 'text'=> 'Languages', 'children' => array(
+				array('id' => 5, 'text'=> 'Java'),
+				array('id' => 6, 'text'=> 'PHP')
+			))
+		);
+		echo CJSON::encode( $tree );
 	}
 	
 	public function actionProducts() 
