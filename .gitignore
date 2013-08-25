@@ -1,3 +1,5 @@
 assets/
 protected/runtime/
+protected/extensions/yii-easyui
 themes/classic/views/
+.settings
