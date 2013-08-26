@@ -10,8 +10,13 @@ $this->breadcrumbs=array(
 <h1>Datebox</h1>
 
 <p>
-Widget representation the Datebox component.<br/>
-See more details <a href="http://www.jeasyui.com/documentation/datebox.php">http://www.jeasyui.com/documentation/datebox.php</a>
+Widget representation the Datebox components.<br/>
+</p>
+
+<p>
+See more details<br/> 
+<a href="http://www.jeasyui.com/documentation/datebox.php">http://www.jeasyui.com/documentation/datebox.php</a><br/>
+<a href="http://www.jeasyui.com/documentation/dateboxtime.php">http://www.jeasyui.com/documentation/datetimebox.php</a>
 </p>
 
 <h2>Example</h2>
@@ -35,7 +40,7 @@ See more details <a href="http://www.jeasyui.com/documentation/datebox.php">http
 
 <h2>Widget</h2>
 
-<script type="syntaxhighlighter" class="brush: php xml; toolbar: false">
+<script type="syntaxhighlighter" class="brush: php; toolbar: false">
 <![CDATA[
 <div class="example">
 	<div class="form">
