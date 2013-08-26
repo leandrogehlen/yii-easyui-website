@@ -31,6 +31,7 @@ class DocController extends Controller
 			array('label'=>'Combotree', 'url'=>array('/doc/page', 'view'=>'combotree')),
 			array('label'=>'Numberbox', 'url'=>array('/doc/page', 'view'=>'numberbox')),
 			array('label'=>'Datebox', 'url'=>array('/doc/page', 'view'=>'datebox')),
+			array('label'=>'Spinner', 'url'=>array('/doc/page', 'view'=>'spinner')),
 		)),
 			
 		array('label'=> 'DataGrid and Tree', 'items'=> array(
