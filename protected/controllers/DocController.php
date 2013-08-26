@@ -28,7 +28,8 @@ class DocController extends Controller
 		array('label'=> 'Form', 'items'=> array(
 			array('label'=>'Validatebox', 'url'=>array('/doc/page', 'view'=>'validatebox')),
 			array('label'=>'Combobox', 'url'=>array('/doc/page', 'view'=>'combobox')),
-			array('label'=>'Combotree', 'url'=>array('/doc/page', 'view'=>'combotree'))
+			array('label'=>'Combotree', 'url'=>array('/doc/page', 'view'=>'combotree')),
+			array('label'=>'Numberbox', 'url'=>array('/doc/page', 'view'=>'numberbox')),
 		)),
 			
 		array('label'=> 'DataGrid and Tree', 'items'=> array(
