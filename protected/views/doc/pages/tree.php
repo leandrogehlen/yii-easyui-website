@@ -1,57 +1,46 @@
 <?php
 /* @var $this DocController */
 
-$this->pageTitle=Yii::app()->name . ' - Combotree';
+$this->pageTitle=Yii::app()->name . ' - Tree';
 $this->breadcrumbs=array(
 	Yii::t('site', 'Documentation')=> array('index'),		
-	'Combotree',
+	'Tree',
 );
 ?>
-<h1>Combotree</h1>
+<h1>Tree</h1>
 
 <p>
-Widget representation the Combotree component.<br/>
-See more details <a href="http://www.jeasyui.com/documentation/Combotree.php">http://www.jeasyui.com/documentation/Combotree.php</a>
+Widget representation the Tree component.<br/>
+See more details <a href="http://www.jeasyui.com/documentation/tree.php">http://www.jeasyui.com/documentation/tree.php</a>
 </p>
 
 <h2>Example</h2>
 
 <div class="example">
-	<div class="form">
-		<div>	
-		<label>Directory/file</label>
-		<?php $this->widget('ext.yii-easyui.widgets.EuiCombotree', array(				
-			'style' => 'width: 200px',			
-			'url' => $this->createUrl('tree')		
-		));?>
-		</div>	
-	</div>
+<?php
+$this->widget('ext.yii-easyui.widgets.EuiTree', array(
+	'url' => $this->createUrl('tree'),
+	'checkbox' => true,
+	'onlyLeafCheck' => true		
+));
+?>
 </div>
 
 <h2>Widget</h2>
 
 <script type="syntaxhighlighter" class="brush: php; toolbar: false">
-<![CDATA[
-<div class="example">
-	<div class="form">
-		<div>
-		<label>Directory/file</label>
-		<?php echo "<?php "?>$this->widget('ext.yii-easyui.widgets.EuiCombotree', array(				
-			'style' => 'width: 200px',				
-			'url' => $this->createUrl('tree')		
-		));
-		<?php echo "?>\n" ?>
-		</div>				
-	</div>
-</div>
-]]>
+$this->widget('ext.yii-easyui.widgets.EuiTree', array(
+	'url' => $this->createUrl('tree'),
+	'checkbox' => true,
+	'onlyLeafCheck' => true		
+));
 </script>
 
 <h2>Controller</h2>
 
 <script type="syntaxhighlighter" class="brush: php; toolbar: false">
 <![CDATA[
-public function actionComboTree()
+public function actionTree()
 {
 	$tree = array(
 		array('id' => 1, 'text'=> 'Folder 1', 'children' => array(
@@ -71,3 +60,4 @@ public function actionComboTree()
 }
 ]]>
 </script>
+

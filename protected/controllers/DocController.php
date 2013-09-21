@@ -36,7 +36,8 @@ class DocController extends Controller
 		)),
 			
 		array('label'=> 'DataGrid and Tree', 'items'=> array(
-			array('label'=>'Datagrid', 'url'=>array('/doc/page', 'view'=>'datagrid')),			
+			array('label'=>'Datagrid', 'url'=>array('/doc/page', 'view'=>'datagrid')),
+			array('label'=>'Tree', 'url'=>array('/doc/page', 'view'=>'tree')),
 		)),
 		
 		array('label'=> 'Window', 'items'=> array(
@@ -94,7 +95,7 @@ class DocController extends Controller
 		echo CJSON::encode( Product::model()->findAll(array('limit'=>10)) );	
 	}
 	
-	public function actionComboTree()
+	public function actionTree()
 	{
 		$tree = array(
 			array('id' => 1, 'text'=> 'Folder 1', 'children' => array(
