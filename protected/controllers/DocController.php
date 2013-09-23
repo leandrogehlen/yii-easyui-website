@@ -132,6 +132,7 @@ class DocController extends Controller
 			$params['order'] = Product::model()->getTableAlias(true).".". $sort." ".$direction;	
 		}
 						
-		echo CJSON::encode( array ('total' => Product::model()->count(), 'rows' => Product::model()->findAll($params)) );
+		echo  $this->exportData(Product::model()->findAll($params), Product::model()->count());
 	}
+		
 }

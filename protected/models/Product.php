@@ -9,6 +9,7 @@
  * @property string $price
  * @property string $status
  * @property string $description
+ * @property Category $category
  */
 class Product extends CActiveRecord
 {
@@ -54,9 +55,8 @@ class Product extends CActiveRecord
 	 */
 	public function relations()
 	{
-		// NOTE: you may need to adjust the relation name and the related
-		// class name for the relations automatically generated below.
 		return array(
+			'category' => array(self::BELONGS_TO, 'Category', 'category_id'),
 		);
 	}
 
@@ -66,11 +66,12 @@ class Product extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'product_id' => 'Product',
-			'name' => 'Name',
-			'price' => 'Price',
-			'status' => 'Status',
-			'description' => 'Description',
+			'id' => Yii::t('site', 'Id'),
+			'name' => Yii::t('site', 'Name'),
+			'price' => Yii::t('site', 'Price'),
+			'status' => Yii::t('site', 'Status'),
+			'description' => Yii::t('site', 'Description'),
+			'category' => Yii::t('site', 'Category'),
 		);
 	}
 

@@ -16,19 +16,19 @@ See more details <a href="http://www.jeasyui.com/documentation/datagrid.php">htt
 
 <h2>Example</h2>
 
-
-<div class="example">
 <?php
+
 $this->widget('ext.yii-easyui.widgets.EuiDataGrid', array(
 	'style' => 'width:auto; height: 200px',
 	'url' => $this->createUrl('products'),
-	'pagination' => true,
+	'pagination' => true,	
 	'columns' => array(
-		array('title' => Product::model()->getAttributeLabel('product_id'), 'field'=>'product_id', 'width'=> 10, 'sortable'=>true),
+		array('title' => Product::model()->getAttributeLabel('id'), 'field'=>'id', 'width'=> 10, 'sortable'=>true),
 		array('title' => Product::model()->getAttributeLabel('name'), 'field'=>'name', 'width'=> 30, 'sortable'=>true),
 		array('title' => Product::model()->getAttributeLabel('price'), 'field'=>'price', 'width'=> 20, 'sortable'=>true),
 		array('title' => Product::model()->getAttributeLabel('status'), 'field'=>'status', 'width'=> 10),
-		array('title' => Product::model()->getAttributeLabel('description'), 'field'=>'description', 'width'=> 30)
+		array('title' => Product::model()->getAttributeLabel('description'), 'field'=>'description', 'width'=> 15),
+		array('title' => Product::model()->getAttributeLabel('category'), 'field'=>'category_name', 'width'=> 15)
 	)		
 ));
 ?>
@@ -47,7 +47,8 @@ $this->widget('ext.yii-easyui.widgets.EuiDataGrid', array(
 		array('title' => 'Name', 'field'=>'name', 'width'=> 30, 'sortable'=>true),
 		array('title' => 'Price', 'field'=>'price', 'width'=> 20, 'sortable'=>true),
 		array('title' => 'Status', 'field'=>'status', 'width'=> 10),
-		array('title' => 'description', 'field'=>'description', 'width'=> 30)
+		array('title' => 'Description', 'field'=>'description', 'width'=> 15),
+		array('title' => 'Category', 'field'=>'category_name', 'width'=> 15)
 	)		
 ));
 ]]>
@@ -72,7 +73,7 @@ public function actionProducts()
 		$params['order'] = Product::model()->getTableAlias(true).".". $sort." ".$direction;	
 	}
 						
-	echo CJSON::encode( array ('total' => Product::model()->count(), 'rows' => Product::model()->findAll($params)) );
+	echo  $this->exportData(Product::model()->findAll($params), Product::model()->count());
 }
 </script>
 

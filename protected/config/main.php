@@ -53,7 +53,7 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=yii_easyui_site',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => 'mysql',
+			//'password' => 'mysql',
 			'charset' => 'utf8',
 		),
 		
