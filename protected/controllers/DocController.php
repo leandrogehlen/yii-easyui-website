@@ -39,6 +39,7 @@ class DocController extends Controller
 		array('label'=> 'DataGrid and Tree', 'items'=> array(
 			array('label'=>'Datagrid', 'url'=>array('/doc/page', 'view'=>'datagrid')),
 			array('label'=>'Tree', 'url'=>array('/doc/page', 'view'=>'tree')),
+			array('label'=>'Treegrid', 'url'=>array('/doc/page', 'view'=>'treegrid')),
 		)),
 		
 		array('label'=> 'Window', 'items'=> array(
@@ -99,21 +100,23 @@ class DocController extends Controller
 	public function actionTree()
 	{
 		$tree = array(
-			array('id' => 1, 'text'=> 'Folder 1', 'children' => array(
-				array('id' => 2, 'text'=> 'file 1'),
-				array('id' => 3, 'text'=> 'file 2'),
-				array('id' => 4, 'text'=> 'Folder 2', 'children' => array(
-					array('id' => 7, 'text'=> 'File 3', 'iconCls' => 'icon-reload'),
-					array('id' => 8, 'text'=> 'File 4')
+			array('id' => 1, 'text'=> 'Folder 1', 'attrs' => 'rxw', 'children' => array(
+				array('id' => 2, 'text'=> 'file 1', 'attrs' => 'r-w'),
+				array('id' => 3, 'text'=> 'file 2', 'attrs' => 'r--'),
+				array('id' => 4, 'text'=> 'Folder 2', 'attrs' => '-xw', 'children' => array(
+					array('id' => 7, 'text'=> 'File 3', 'attrs' => '--w', 'iconCls' => 'icon-reload'),
+					array('id' => 8, 'text'=> 'File 4', 'attrs' => '-x-',)
 				))
 			)),
-			array('id' => 4, 'text'=> 'Languages', 'children' => array(
-				array('id' => 5, 'text'=> 'Java'),
-				array('id' => 6, 'text'=> 'PHP')
+			array('id' => 4, 'text'=> 'Languages', 'attrs' => 'rw-', 'children' => array(
+				array('id' => 5, 'text'=> 'Java', 'attrs' => 'rwx'),
+				array('id' => 6, 'text'=> 'PHP', 'attrs' => 'r--')
 			))
 		);
 		echo CJSON::encode( $tree );
 	}
+	
+	
 	
 	public function actionProducts() 
 	{
