@@ -16,11 +16,13 @@ See more details <a href="http://www.jeasyui.com/documentation/datagrid.php">htt
 
 <h2>Example</h2>
 
+<div class="example">
 <?php
 
 $this->widget('ext.yii-easyui.widgets.EuiDataGrid', array(
 	'style' => 'width:auto; height: 200px',
 	'url' => $this->createUrl('products'),
+	'idField' => 'id',
 	'pagination' => true,	
 	'columns' => array(
 		array('title' => Product::model()->getAttributeLabel('id'), 'field'=>'id', 'width'=> 10, 'sortable'=>true),
