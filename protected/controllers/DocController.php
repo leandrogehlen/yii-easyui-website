@@ -38,6 +38,7 @@ class DocController extends Controller
 			
 		array('label'=> 'DataGrid and Tree', 'items'=> array(
 			array('label'=>'Datagrid', 'url'=>array('/doc/page', 'view'=>'datagrid')),
+			array('label'=>'PropertyGrid', 'url'=>array('/doc/page', 'view'=>'propertygrid')),
 			array('label'=>'Tree', 'url'=>array('/doc/page', 'view'=>'tree')),
 			array('label'=>'Treegrid', 'url'=>array('/doc/page', 'view'=>'treegrid')),
 		)),
@@ -136,6 +137,20 @@ class DocController extends Controller
 		}
 						
 		echo  $this->exportData(Product::model()->findAll($params), Product::model()->count());
+	}
+	
+	public function actionProperties()
+	{
+		$data = array(
+			array("name"=>"Name","value"=>"Bill Smith","group"=>"ID Settings","editor"=>"text"),
+			array("name"=>"Address","value"=>"","group"=>"ID Settings","editor"=>"text"),
+			array("name"=>"SSN","value"=>"123-456-7890","group"=>"ID Settings","editor"=>"text"),
+			array("name"=>"Email","value"=>"bill@gmail.com","group"=>"Marketing Settings","editor"=>array(
+				"type"=>"validatebox",
+				"options"=>array("validType"=>"email")					
+			))
+		);
+		echo  $this->exportData($data);
 	}
 		
 }
