@@ -18,29 +18,62 @@ See more details <a href="http://www.jeasyui.com/documentation/accordion.php">ht
 
 <div class="example">
 <?php
-$this->widget('ext.yii-easyui.widgets.EuiAccordion', array(
-	'style' => 'width:300px;height:200px;',
-	'items' =>array(
-		array('title'=>'Title1'),
-		array('title'=>'Title2'),
-		array('title'=>'Title3')
-	)		
+$this->beginWidget('ext.yii-easyui.widgets.EuiAccordion', array(
+	'style' => 'width:300px;height:200px;'		
 ));
 ?> 
+	<?php $this->beginWidget('ext.yii-easyui.widgets.EuiAccordionpanel', array(
+		'title' => 'Panel 1'
+	));?>
+
+	<br/><p> Content of panel 1 </p>
+	
+	<?php $this->endWidget(); ?>
+	
+	<?php $this->beginWidget('ext.yii-easyui.widgets.EuiAccordionpanel', array(
+		'title' => 'Panel 2', 
+		'selected' => true		
+	));?>
+
+	<br/><p> Content of panel 2</p>		
+	
+	<?php $this->endWidget(); ?>
+
+<?php $this->endWidget(); ?>
 </div>
 
 <h2>Widget</h2>
 
 <script type="syntaxhighlighter" class="brush: php; toolbar: false">
 <![CDATA[
-$this->widget('ext.yii-easyui.widgets.EuiAccordion', array(
-	'style' => 'width:300px;height:200px;',
-	'items' =>array(
-		array('title'=>'Title1'),
-		array('title'=>'Title2'),
-		array('title'=>'Title3')
-	)		
-));
+<?php echo "<?php"; ?>
+$this->beginWidget('ext.yii-easyui.widgets.EuiAccordion', array(
+	'style' => 'width:300px;height:200px;'		
+));<?php echo "?>"; ?>
+
+
+	<?php echo "<?php"; ?> $this->beginWidget('ext.yii-easyui.widgets.EuiAccordionpanel', array(
+		'title' => 'Panel 1'
+	));<?php echo "?>"; ?>
+
+
+	<br/><p> Content of panel 1 </p>
+	
+	<?php echo "<?php"; ?> $this->endWidget(); <?php echo "?>"; ?>
+
+	
+	<?php echo "<?php"; ?> $this->beginWidget('ext.yii-easyui.widgets.EuiAccordionpanel', array(
+		'title' => 'Panel 2', 
+		'selected' => true		
+	));<?php echo "?>"; ?>
+
+
+	<br/><p> Content of panel 2</p>		
+	
+	<?php echo "<?php"; ?> $this->endWidget(); <?php echo "?>"; ?>
+
+
+<?php echo "<?php"; ?> $this->endWidget(); <?php echo "?>"; ?>
 ]]>
 </script>
 
