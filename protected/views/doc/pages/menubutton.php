@@ -19,12 +19,38 @@ See more details <a href="http://www.jeasyui.com/documentation/menubutton.php">h
 <div class="example">
 	<div style="padding:5px;border:1px solid #ddd;">   
 	<?php
+	$this->widget('ext.yii-easyui.widgets.EuiMenu', array(
+		'id' => 'menu_file',
+		'items' =>array(
+			array('text'=>'New'),
+			array('text'=>'Open', 'items' => array(
+				array('text' => 'Word'),
+				array('text' => 'Excel'),
+			)),
+			array('text'=>'Save', 'iconCls' => 'icon-save'),
+			array('separator'=>true),
+			array('text'=>'Exit')
+		)
+	));
+	
+	$this->widget('ext.yii-easyui.widgets.EuiMenu', array(
+		'id' => 'menu_edit',
+		'items' =>array(
+			array('text'=>'Copy'),
+			array('text'=>'Paste')
+		)
+	));
+	
 	$this->widget('ext.yii-easyui.widgets.EuiMenubutton', array(
-		'id' => 'mm',	
-		'buttons' =>array(
-			array('text'=>'File'),
-			array('text'=>'Edit')												
-		)		
+		'id' => 'btn_file',
+		'text'=> 'File',
+		'menu' => '#menu_file'				
+	));
+	
+	$this->widget('ext.yii-easyui.widgets.EuiMenubutton', array(
+		'id' => 'btn_edit',
+		'text'=> 'Edit',
+		'menu' => '#menu_edit'
 	));
 	?>
 	</div>
@@ -34,14 +60,38 @@ See more details <a href="http://www.jeasyui.com/documentation/menubutton.php">h
 
 <script type="syntaxhighlighter" class="brush: php; toolbar: false">
 <![CDATA[
+$this->widget('ext.yii-easyui.widgets.EuiMenu', array(
+	'id' => 'menu_file',
+	'items' =>array(
+		array('text'=>'New'),
+		array('text'=>'Open', 'items' => array(
+			array('text' => 'Word'),
+			array('text' => 'Excel'),
+		)),
+		array('text'=>'Save', 'iconCls' => 'icon-save'),
+		array('separator'=>true),
+		array('text'=>'Exit')
+	)
+));
+	
+$this->widget('ext.yii-easyui.widgets.EuiMenu', array(
+	'id' => 'menu_edit',
+	'items' =>array(
+		array('text'=>'Copy'),
+		array('text'=>'Paste')
+	)
+));
+	
 $this->widget('ext.yii-easyui.widgets.EuiMenubutton', array(
-	'id' => 'mm',	
-	'buttons' =>array(
-		array('text'=>'File'),
-		array('text'=>'Edit')												
-	)		
+	'id' => 'btn_file',
+	'text'=> 'File',
+	'menu' => '#menu_file'				
+));
+	
+$this->widget('ext.yii-easyui.widgets.EuiMenubutton', array(
+	'id' => 'btn_edit',
+	'text'=> 'Edit',
+	'menu' => '#menu_edit'
 ));
 ]]>
 </script>
-   
-
