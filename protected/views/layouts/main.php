@@ -33,6 +33,7 @@
 			'items'=>array(
 				array('label'=>Yii::t('site', 'Home'), 'url'=>array('/site/index')),
 				array('label'=>Yii::t('site', 'Documentation'), 'url'=>array('/doc/index')),                			
+				array('label'=>Yii::t('site', 'Demos'), 'url'=>array('/product')),
 			),
 		)); 
 	?>			

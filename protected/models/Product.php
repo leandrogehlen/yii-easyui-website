@@ -39,7 +39,7 @@ class Product extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('price', 'required'),
+			array('name, price', 'required'),
 			array('name', 'length', 'max'=>255),
 			array('price', 'length', 'max'=>15),
 			array('status', 'length', 'max'=>1),
@@ -72,6 +72,19 @@ class Product extends CActiveRecord
 			'status' => Yii::t('site', 'Status'),
 			'description' => Yii::t('site', 'Description'),
 			'category' => Yii::t('site', 'Category'),
+		);
+	}
+	
+	public function attributeExports() 
+	{
+		return array(
+			'id',
+			'name',
+			'price',
+			'status',
+			'description',
+			'category.name',
+			//'category_id'	
 		);
 	}
 

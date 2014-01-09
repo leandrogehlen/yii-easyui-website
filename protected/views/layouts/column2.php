@@ -5,14 +5,17 @@
 	<div id="sidebar">
 	<?php
 		foreach ($this->menu as $item) 
-		{
+		{			
 			$this->beginWidget('zii.widgets.CPortlet', array(
 				'title'=>Yii::t('site', $item['label']),
 			));
-			$this->widget('zii.widgets.CMenu', array(
-				'items'=>$item['items'],
-				'htmlOptions'=>array('class'=>'operations'),
-			));				
+			if (isset($item['items'])) 
+			{
+				$this->widget('zii.widgets.CMenu', array(
+					'items'=>$item['items'],
+					'htmlOptions'=>array('class'=>'operations'),
+				));
+			}				
 			$this->endWidget();		
 		}
 	?>
