@@ -7,7 +7,7 @@
  * @property integer $id
  * @property string $name
  */
-class Category extends CActiveRecord
+class Category extends EuiActiveRecord
 {
 	/**
 	 * @return string the associated database table name
@@ -38,32 +38,6 @@ class Category extends CActiveRecord
 			'id' => Yii::t('site', 'Id'),
 			'name' => Yii::t('site', 'Name'),
 		);
-	}
-
-	/**
-	 * Retrieves a list of models based on the current search/filter conditions.
-	 *
-	 * Typical usecase:
-	 * - Initialize the model fields with values from filter form.
-	 * - Execute this method to get CActiveDataProvider instance which will filter
-	 * models according to data in model fields.
-	 * - Pass data provider to CGridView, CListView or any similar widget.
-	 *
-	 * @return CActiveDataProvider the data provider that can return the models
-	 * based on the search/filter conditions.
-	 */
-	public function search()
-	{
-		// @todo Please modify the following code to remove attributes that should not be searched.
-
-		$criteria=new CDbCriteria;
-
-		$criteria->compare('id',$this->id);
-		$criteria->compare('name',$this->name,true);
-
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		));
 	}
 
 	/**

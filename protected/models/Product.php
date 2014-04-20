@@ -87,25 +87,4 @@ class Product extends EuiActiveRecord
 			//'category_id'	
 		);
 	}	
-	
-	public function searchAttributes()
-	{
-		return array('product_id', 'name', 'category.name');
-	}
-	
-	public function searchDef(){		
-		
-			$criteria=new CDbCriteria;
-		
-			$criteria->compare('id',$this->id);
-			$criteria->compare('name',$this->name,true);
-			$criteria->compare('price',$this->price,true);
-			$criteria->compare('status',$this->status,true);
-			$criteria->compare('description',$this->description,true);
-			$criteria->compare('category_id',$this->category_id);
-		
-			return new CActiveDataProvider($this, array(
-					'criteria'=>$criteria,
-			));		
-	}
 }
