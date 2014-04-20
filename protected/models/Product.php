@@ -11,7 +11,7 @@
  * @property string $description
  * @property Category $category
  */
-class Product extends CActiveRecord
+class Product extends EuiActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -46,7 +46,7 @@ class Product extends CActiveRecord
 			array('description', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('product_id, name, price, status, description', 'safe', 'on'=>'search'),
+			array('product_id, name, category.name', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -86,27 +86,26 @@ class Product extends CActiveRecord
 			'category.name',
 			//'category_id'	
 		);
-	}
-
-	/**
-	 * Retrieves a list of models based on the current search/filter conditions.
-	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
-	 */
-	public function search()
+	}	
+	
+	public function searchAttributes()
 	{
-		// Warning: Please modify the following code to remove attributes that
-		// should not be searched.
-
-		$criteria=new CDbCriteria;
-
-		$criteria->compare('product_id',$this->product_id);
-		$criteria->compare('name',$this->name,true);
-		$criteria->compare('price',$this->price,true);
-		$criteria->compare('status',$this->status,true);
-		$criteria->compare('description',$this->description,true);
-
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		));
+		return array('product_id', 'name', 'category.name');
+	}
+	
+	public function searchDef(){		
+		
+			$criteria=new CDbCriteria;
+		
+			$criteria->compare('id',$this->id);
+			$criteria->compare('name',$this->name,true);
+			$criteria->compare('price',$this->price,true);
+			$criteria->compare('status',$this->status,true);
+			$criteria->compare('description',$this->description,true);
+			$criteria->compare('category_id',$this->category_id);
+		
+			return new CActiveDataProvider($this, array(
+					'criteria'=>$criteria,
+			));		
 	}
 }

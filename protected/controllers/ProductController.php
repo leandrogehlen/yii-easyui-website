@@ -12,20 +12,23 @@ class ProductController extends DemoController
 	}
 	
 	/**
-	 * Lists all models.
+	 * Render index page
 	 */
 	public function actionIndex()
 	{		
 		$this->render('index', array('model' => Product::model()));
 	}
 
+	/**
+	 * Lists all models.
+	 */
 	public function actionList()
-	{
-		$model = Product::model();
-		$crit = $model->getDbCriteria();
-	
-		$this->prepareList($model, $crit);
-		echo $this->exportData($model->findAll($crit), $model->count($crit));
+	{					
+		$q = (isset($_REQUEST['__q'])) ? $_REQUEST['__q'] : null;
+						
+		$dataProvider = Product::model()->search($q);						
+		
+		echo $this->exportData($dataProvider);
 	}
 
 	/**

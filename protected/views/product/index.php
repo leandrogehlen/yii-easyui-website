@@ -29,11 +29,17 @@ $('#btn-save').click(function(){
 $('#btn-cancel').click(function(){
 	$('#product-win').dialog('close');
 });	
+			
+$('#txt-search').searchbox({
+	searcher: function(value, name){
+		crud.search(value);		
+	}
+});			
 ");
 ?>
 
-<div id="tb" style="padding:5px;height:auto">
-	<div style="margin-bottom:5px">
+<div id="tb" style="width: 100%; height: 30px; padding-top: 6px">
+	<div class="crudbar-left" style="float: left;">
 		<?php 
 		$this->widget('ext.yii-easyui.widgets.EuiLinkbutton', array(
 			'id' => 'btn-add',
@@ -57,6 +63,14 @@ $('#btn-cancel').click(function(){
 		));
 		?>    	
 	</div>
+	<div style="padding-right:6px; float: right;">
+		<?php
+		$this->widget('ext.yii-easyui.widgets.EuiSearchbox', array(
+			'id'=>'txt-search',
+			'prompt'=> 'Please Input Value',			
+		));
+		?>
+	</div>
 </div>
 
 <h1>Products</h1>
@@ -75,7 +89,7 @@ $('#btn-cancel').click(function(){
 		array('title' => Product::model()->getAttributeLabel('price'), 'field'=>'price', 'width'=> 20, 'sortable'=>true),
 		array('title' => Product::model()->getAttributeLabel('status'), 'field'=>'status', 'width'=> 10),
 		array('title' => Product::model()->getAttributeLabel('description'), 'field'=>'description', 'width'=> 15),
-		array('title' => Product::model()->getAttributeLabel('category'), 'field'=>'category_name', 'width'=> 15)
+		array('title' => Product::model()->getAttributeLabel('category'), 'field'=>'category_name', 'width'=> 15, 'sortable' => true)
 	)	
 ));
 ?>

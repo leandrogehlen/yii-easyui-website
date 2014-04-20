@@ -16,7 +16,8 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
-		'application.extensions.yii-easyui.base.*',		
+		'application.extensions.yii-easyui.web.*',
+		'application.extensions.yii-easyui.data.EuiActiveRecord',		
 	),
 
 	'modules'=>array(
