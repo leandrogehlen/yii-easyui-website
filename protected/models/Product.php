@@ -21,32 +21,19 @@ class Product extends EuiActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
-	}
-
-	/**
-	 * @return string the associated database table name
-	 */
-	public function tableName()
-	{
-		return 'product';
-	}
+	}	
 
 	/**
 	 * @return array validation rules for model attributes.
 	 */
 	public function rules()
 	{
-		// NOTE: you should only define rules for those attributes that
-		// will receive user inputs.
 		return array(
 			array('name, price', 'required'),
 			array('name', 'length', 'max'=>255),
 			array('price', 'length', 'max'=>15),
 			array('status', 'length', 'max'=>1),
-			array('description', 'safe'),
-			// The following rule is used by search().
-			// Please remove those attributes that should not be searched.
-			array('product_id, name, category.name', 'safe', 'on'=>'search'),
+			array('description', 'safe'),						
 		);
 	}
 
@@ -87,4 +74,15 @@ class Product extends EuiActiveRecord
 			//'category_id'	
 		);
 	}	
+	
+	public function searchAttributes()
+	{
+	    return array(
+	        'id',
+	        'name',	        
+	        'description',
+	        'category.name'	      
+	    );
+	}
+	    
 }
