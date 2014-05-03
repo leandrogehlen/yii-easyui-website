@@ -4,7 +4,7 @@
 $this->pageTitle=Yii::app()->name . ' - Combobox';
 $this->breadcrumbs=array(
 	Yii::t('site', 'Documentation')=> array('index'),		
-	'Combobox',
+	'ComboBox',
 );
 ?>
 <h1>Combobox</h1>
@@ -31,7 +31,7 @@ See more details <a href="http://www.jeasyui.com/documentation/Combobox.php">htt
 		</div>
 		<div>
 		<label>Remote</label>
-		<?php $this->widget('ext.yii-easyui.widgets.EuiCombobox', array(
+		<?php $this->widget('ext.yii-easyui.widgets.EuiComboBox', array(
 			'textField' => 'name',
 			'valueField' => 'product_id',
 			'url' => $this->createUrl('comboProducts')
@@ -48,7 +48,7 @@ See more details <a href="http://www.jeasyui.com/documentation/Combobox.php">htt
 	<div class="form">
 		<div>
 		<label>Simple</label>
-		<?php echo "<?php " ?>$this->widget('ext.yii-easyui.widgets.EuiCombobox', array(
+		<?php echo "<?php " ?>$this->widget('ext.yii-easyui.widgets.EuiComboBox', array(
 			'panelHeight' => 'auto',
 			'options' => array(
 				array('description' =>'item 1', 'value' => 1),
@@ -60,7 +60,7 @@ See more details <a href="http://www.jeasyui.com/documentation/Combobox.php">htt
 		</div>
 		<div>
 		<label>Remote</label>
-		<?php echo "<?php " ?> $this->widget('ext.yii-easyui.widgets.EuiCombobox', array(
+		<?php echo "<?php " ?> $this->widget('ext.yii-easyui.widgets.EuiComboBox', array(
 			'textField' => 'name',
 			'valueField' => 'product_id',
 			'url' => $this->createUrl('comboProducts')

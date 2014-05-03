@@ -8,7 +8,7 @@ class DocController extends Controller
 		array('label'=> 'Base', 'items'=> array(				
 			array('label'=>'Pagination', 'url'=>array('/doc/page', 'view'=>'pagination')),
 			array('label'=>'Searchbox', 'url'=>array('/doc/page', 'view'=>'searchbox')),
-			array('label'=>'Progressbar', 'url'=>array('/doc/page', 'view'=>'progressbar')),
+			array('label'=>'ProgressBar', 'url'=>array('/doc/page', 'view'=>'progressbar')),
 		)),
 			
 		array('label'=> 'Layout', 'items'=> array(
@@ -20,27 +20,27 @@ class DocController extends Controller
 			
 		array('label'=> 'Menu and Button', 'items'=> array(
 			array('label'=>'Menu', 'url'=>array('/doc/page', 'view'=>'menu')),			
-			array('label'=>'Linkbutton', 'url'=>array('/doc/page', 'view'=>'linkbutton')),
-			array('label'=>'Menubutton', 'url'=>array('/doc/page', 'view'=>'menubutton')),
-			array('label'=>'Splitbutton', 'url'=>array('/doc/page', 'view'=>'splitbutton')),
+			array('label'=>'LinkButton', 'url'=>array('/doc/page', 'view'=>'linkbutton')),
+			array('label'=>'MenuButton', 'url'=>array('/doc/page', 'view'=>'menubutton')),
+			array('label'=>'SplitButton', 'url'=>array('/doc/page', 'view'=>'splitbutton')),
 		)),
 			
 		array('label'=> 'Form', 'items'=> array(
-			array('label'=>'Validatebox', 'url'=>array('/doc/page', 'view'=>'validatebox')),
-			array('label'=>'Combobox', 'url'=>array('/doc/page', 'view'=>'combobox')),
-			array('label'=>'Combogrid', 'url'=>array('/doc/page', 'view'=>'combogrid')),
-			array('label'=>'Combotree', 'url'=>array('/doc/page', 'view'=>'combotree')),
-			array('label'=>'Numberbox', 'url'=>array('/doc/page', 'view'=>'numberbox')),
-			array('label'=>'Datebox', 'url'=>array('/doc/page', 'view'=>'datebox')),
+			array('label'=>'ValidateBox', 'url'=>array('/doc/page', 'view'=>'validatebox')),
+			array('label'=>'ComboBox', 'url'=>array('/doc/page', 'view'=>'combobox')),
+			array('label'=>'ComboGrid', 'url'=>array('/doc/page', 'view'=>'combogrid')),
+			array('label'=>'ComboTree', 'url'=>array('/doc/page', 'view'=>'combotree')),
+			array('label'=>'NumberBox', 'url'=>array('/doc/page', 'view'=>'numberbox')),
+			array('label'=>'DateBox', 'url'=>array('/doc/page', 'view'=>'datebox')),
 			array('label'=>'Spinner', 'url'=>array('/doc/page', 'view'=>'spinner')),
 			array('label'=>'Slider', 'url'=>array('/doc/page', 'view'=>'slider')),
 		)),
 			
 		array('label'=> 'DataGrid and Tree', 'items'=> array(
-			array('label'=>'Datagrid', 'url'=>array('/doc/page', 'view'=>'datagrid')),
+			array('label'=>'DataGrid', 'url'=>array('/doc/page', 'view'=>'datagrid')),
 			array('label'=>'PropertyGrid', 'url'=>array('/doc/page', 'view'=>'propertygrid')),
 			array('label'=>'Tree', 'url'=>array('/doc/page', 'view'=>'tree')),
-			array('label'=>'Treegrid', 'url'=>array('/doc/page', 'view'=>'treegrid')),
+			array('label'=>'TreeGrid', 'url'=>array('/doc/page', 'view'=>'treegrid')),
 		)),
 		
 		array('label'=> 'Window', 'items'=> array(

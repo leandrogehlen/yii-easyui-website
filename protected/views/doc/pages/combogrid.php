@@ -4,7 +4,7 @@
 $this->pageTitle=Yii::app()->name . ' - Combogrid';
 $this->breadcrumbs=array(
 	Yii::t('site', 'Documentation')=> array('index'),		
-	'Combogrid',
+	'ComboGrid',
 );
 ?>
 <h1>Combogrid</h1>
@@ -20,7 +20,7 @@ See more details <a href="http://www.jeasyui.com/documentation/combogrid.php">ht
 	<div class="form">
 		<div>	
 		<label>Products</label>
-		<?php $this->widget('ext.yii-easyui.widgets.EuiCombogrid', array(				
+		<?php $this->widget('ext.yii-easyui.widgets.EuiComboGrid', array(				
 			'style' => 'width: 200px',
 			'panelWidth' => 520,
 			'pagination' => true,
@@ -28,7 +28,7 @@ See more details <a href="http://www.jeasyui.com/documentation/combogrid.php">ht
 			'idField' => 'product_id',
 			'textField' => 'name',
 			'columns' => array(
-				array('title' => Product::model()->getAttributeLabel('product_id'), 'field'=>'product_id', 'width'=> 10, 'sortable'=>true),
+				array('title' => Product::model()->getAttributeLabel('id'), 'field'=>'id', 'width'=> 10, 'sortable'=>true),
 				array('title' => Product::model()->getAttributeLabel('name'), 'field'=>'name', 'width'=> 30, 'sortable'=>true),
 				array('title' => Product::model()->getAttributeLabel('price'), 'field'=>'price', 'width'=> 20, 'sortable'=>true),
 				array('title' => Product::model()->getAttributeLabel('status'), 'field'=>'status', 'width'=> 10),
@@ -47,7 +47,7 @@ See more details <a href="http://www.jeasyui.com/documentation/combogrid.php">ht
 	<div class="form">
 		<div>
 		<label>Products</label>
-		<?php echo "<?php "?>$this->widget('ext.yii-easyui.widgets.EuiCombogrid', array(				
+		<?php echo "<?php "?>$this->widget('ext.yii-easyui.widgets.EuiComboGrid', array(				
 			'style' => 'width: 200px',
 			'panelWidth' => 520,
 			'pagination' => true,
@@ -55,7 +55,7 @@ See more details <a href="http://www.jeasyui.com/documentation/combogrid.php">ht
 			'idField' => 'product_id',
 			'textField' => 'name',
 			'columns' => array(
-				array('title' => Product::model()->getAttributeLabel('product_id'), 'field'=>'product_id', 'width'=> 10, 'sortable'=>true),
+				array('title' => Product::model()->getAttributeLabel('id'), 'field'=>'id', 'width'=> 10, 'sortable'=>true),
 				array('title' => Product::model()->getAttributeLabel('name'), 'field'=>'name', 'width'=> 30, 'sortable'=>true),
 				array('title' => Product::model()->getAttributeLabel('price'), 'field'=>'price', 'width'=> 20, 'sortable'=>true),
 				array('title' => Product::model()->getAttributeLabel('status'), 'field'=>'status', 'width'=> 10),

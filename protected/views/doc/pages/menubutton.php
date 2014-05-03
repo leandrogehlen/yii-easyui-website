@@ -1,10 +1,10 @@
 <?php
 /* @var $this SiteController */
 
-$this->pageTitle=Yii::app()->name . ' - Menubutton';
+$this->pageTitle=Yii::app()->name . ' - MenuButton';
 $this->breadcrumbs=array(
 	Yii::t('site', 'Documentation')=> array('index'),		
-	'Menubuttonbutton',
+	'MenuButton',
 );
 ?>
 <h1>Menubutton</h1>
@@ -41,13 +41,13 @@ See more details <a href="http://www.jeasyui.com/documentation/menubutton.php">h
 		)
 	));
 	
-	$this->widget('ext.yii-easyui.widgets.EuiMenubutton', array(
+	$this->widget('ext.yii-easyui.widgets.EuiMenuButton', array(
 		'id' => 'btn_file',
 		'text'=> 'File',
 		'menu' => '#menu_file'				
 	));
 	
-	$this->widget('ext.yii-easyui.widgets.EuiMenubutton', array(
+	$this->widget('ext.yii-easyui.widgets.EuiMenuButton', array(
 		'id' => 'btn_edit',
 		'text'=> 'Edit',
 		'menu' => '#menu_edit'

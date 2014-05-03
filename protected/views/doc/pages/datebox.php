@@ -1,10 +1,10 @@
 <?php
 /* @var $this DocController */
 
-$this->pageTitle=Yii::app()->name . ' - Datebox';
+$this->pageTitle=Yii::app()->name . ' - DateBox';
 $this->breadcrumbs=array(
 	Yii::t('site', 'Documentation')=> array('index'),		
-	'Datebox',
+	'DateBox',
 );
 ?>
 <h1>Datebox</h1>
@@ -25,13 +25,13 @@ See more details<br/>
 	<div class="form">
 		<div>
 		<label>Date</label>
-		<?php $this->widget('ext.yii-easyui.widgets.EuiDatebox', array(
+		<?php $this->widget('ext.yii-easyui.widgets.EuiDateBox', array(
 			'required' => true					
 		));?>
 		</div>			
 		<div>
 		<label>Date/Time</label>
-		<?php $this->widget('ext.yii-easyui.widgets.EuiDatetimebox', array(
+		<?php $this->widget('ext.yii-easyui.widgets.EuiDatetimeBox', array(
 			'showSeconds' => false					
 		));?>
 		</div>
@@ -46,14 +46,14 @@ See more details<br/>
 	<div class="form">
 		<div>
 		<label>Date</label>
-		<?php echo "<?php "?>$this->widget('ext.yii-easyui.widgets.EuiDatebox', array(
+		<?php echo "<?php "?>$this->widget('ext.yii-easyui.widgets.EuiDateBox', array(
 			'required' => true					
 		));
 		<?php echo "?>\n" ?>
 		</div>			
 		<div>
 		<label>Date/Time</label>
-		<?php echo "<?php "?>$this->widget('ext.yii-easyui.widgets.EuiDatetimebox', array(
+		<?php echo "<?php "?>$this->widget('ext.yii-easyui.widgets.EuiDatetimeBox', array(
 			'showSeconds' => false					
 		));
 		<?php echo "?>\n" ?>

@@ -1,10 +1,10 @@
 <?php
 /* @var $this DocController */
 
-$this->pageTitle=Yii::app()->name . ' - Linkbutton';
+$this->pageTitle=Yii::app()->name . ' - LinkButton';
 $this->breadcrumbs=array(
 	Yii::t('site', 'Documentation')=> array('index'),		
-	'Linkbutton',
+	'LinkButton',
 );
 ?>
 <h1>Linkbutton</h1>
@@ -20,17 +20,17 @@ See more details <a href="http://www.jeasyui.com/documentation/linkbutton.php">h
 <div class="example">
 <?php
 
-$this->widget('ext.yii-easyui.widgets.EuiLinkbutton', array(
+$this->widget('ext.yii-easyui.widgets.EuiLinkButton', array(
 	'iconCls'=> 'icon-add', 
 	'plain' => false,
 	'text' => 'Add'
 ));
-$this->widget('ext.yii-easyui.widgets.EuiLinkbutton', array(
+$this->widget('ext.yii-easyui.widgets.EuiLinkButton', array(
 	'iconCls'=> 'icon-edit', 
 	'plain' => false,
 	'text' => 'Edit'
 ));
-$this->widget('ext.yii-easyui.widgets.EuiLinkbutton', array(
+$this->widget('ext.yii-easyui.widgets.EuiLinkButton', array(
 	'iconCls'=> 'icon-remove', 
 	'plain' => false,
 	'text' => 'Remove'
@@ -42,17 +42,17 @@ $this->widget('ext.yii-easyui.widgets.EuiLinkbutton', array(
 
 <script type="syntaxhighlighter" class="brush: php; toolbar: false">
 <![CDATA[
-$this->widget('ext.yii-easyui.widgets.EuiLinkbutton', array(
+$this->widget('ext.yii-easyui.widgets.EuiLinkButton', array(
 	'iconCls'=> 'icon-add', 
 	'plain' => false,
 	'text' => 'Add'
 ));
-$this->widget('ext.yii-easyui.widgets.EuiLinkbutton', array(
+$this->widget('ext.yii-easyui.widgets.EuiLinkButton', array(
 	'iconCls'=> 'icon-edit', 
 	'plain' => false,
 	'text' => 'Edit'
 ));
-$this->widget('ext.yii-easyui.widgets.EuiLinkbutton', array(
+$this->widget('ext.yii-easyui.widgets.EuiLinkButton', array(
 	'iconCls'=> 'icon-remove', 
 	'plain' => false,
 	'text' => 'Remove'

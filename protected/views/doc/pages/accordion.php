@@ -22,16 +22,18 @@ $this->beginWidget('ext.yii-easyui.widgets.EuiAccordion', array(
 	'style' => 'width:300px;height:200px;'		
 ));
 ?> 
-	<?php $this->beginWidget('ext.yii-easyui.widgets.EuiAccordionpanel', array(
-		'title' => 'Panel 1'
+	<?php $this->beginWidget('ext.yii-easyui.widgets.EuiPanel', array(
+		'title' => 'Panel 1',
+	    'internal' => true
 	));?>
 
 	<br/><p> Content of panel 1 </p>
 	
 	<?php $this->endWidget(); ?>
 	
-	<?php $this->beginWidget('ext.yii-easyui.widgets.EuiAccordionpanel', array(
+	<?php $this->beginWidget('ext.yii-easyui.widgets.EuiPanel', array(
 		'title' => 'Panel 2', 
+	    'internal'  => true,
 		'selected' => true		
 	));?>
 
@@ -53,7 +55,8 @@ $this->beginWidget('ext.yii-easyui.widgets.EuiAccordion', array(
 
 
 	<?php echo "<?php"; ?> $this->beginWidget('ext.yii-easyui.widgets.EuiAccordionpanel', array(
-		'title' => 'Panel 1'
+		'title' => 'Panel 1',
+        'internal'  => true,
 	));<?php echo "?>"; ?>
 
 
@@ -64,6 +67,7 @@ $this->beginWidget('ext.yii-easyui.widgets.EuiAccordion', array(
 	
 	<?php echo "<?php"; ?> $this->beginWidget('ext.yii-easyui.widgets.EuiAccordionpanel', array(
 		'title' => 'Panel 2', 
+        'internal'  => true,    
 		'selected' => true		
 	));<?php echo "?>"; ?>
 

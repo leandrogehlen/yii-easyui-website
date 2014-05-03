@@ -1,10 +1,10 @@
 <?php
 /* @var $this DocController */
 
-$this->pageTitle=Yii::app()->name . ' - Propertygrid';
+$this->pageTitle=Yii::app()->name . ' - PropertyGrid';
 $this->breadcrumbs=array(
 	Yii::t('site', 'Documentation')=> array('index'),		
-	'Propertygrid',
+	'PropertyGrid',
 );
 ?>
 <h1>Propertygrid</h1>
@@ -18,7 +18,7 @@ See more details <a href="http://www.jeasyui.com/documentation/propertygrid.php"
 
 <div class="example">
 <?php
-$this->widget('ext.yii-easyui.widgets.EuiPropertygrid', array(	
+$this->widget('ext.yii-easyui.widgets.EuiPropertyGrid', array(	
 	'url' => $this->createUrl('properties'),
 	'style' => 'width:300px',
 	'showGroup' => true    
@@ -30,7 +30,7 @@ $this->widget('ext.yii-easyui.widgets.EuiPropertygrid', array(
 
 <script type="syntaxhighlighter" class="brush: php; toolbar: false">
 <![CDATA[
-$this->widget('ext.yii-easyui.widgets.EuiPropertygrid', array(	
+$this->widget('ext.yii-easyui.widgets.EuiPropertyGrid', array(	
 	'url' => $this->createUrl('properties'),
 	'style' => 'width:300px',
 	'showGroup' => true    

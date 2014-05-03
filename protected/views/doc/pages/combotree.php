@@ -4,14 +4,14 @@
 $this->pageTitle=Yii::app()->name . ' - Combotree';
 $this->breadcrumbs=array(
 	Yii::t('site', 'Documentation')=> array('index'),		
-	'Combotree',
+	'ComboTree',
 );
 ?>
 <h1>Combotree</h1>
 
 <p>
 Widget representation the Combotree component.<br/>
-See more details <a href="http://www.jeasyui.com/documentation/Combotree.php">http://www.jeasyui.com/documentation/Combotree.php</a>
+See more details <a href="http://www.jeasyui.com/documentation/combotree.php">http://www.jeasyui.com/documentation/Combotree.php</a>
 </p>
 
 <h2>Example</h2>
@@ -20,7 +20,7 @@ See more details <a href="http://www.jeasyui.com/documentation/Combotree.php">ht
 	<div class="form">
 		<div>	
 		<label>Directory/file</label>
-		<?php $this->widget('ext.yii-easyui.widgets.EuiCombotree', array(				
+		<?php $this->widget('ext.yii-easyui.widgets.EuiComboTree', array(				
 			'style' => 'width: 200px',			
 			'url' => $this->createUrl('tree')		
 		));?>
@@ -36,7 +36,7 @@ See more details <a href="http://www.jeasyui.com/documentation/Combotree.php">ht
 	<div class="form">
 		<div>
 		<label>Directory/file</label>
-		<?php echo "<?php "?>$this->widget('ext.yii-easyui.widgets.EuiCombotree', array(				
+		<?php echo "<?php "?>$this->widget('ext.yii-easyui.widgets.EuiComboTree', array(				
 			'style' => 'width: 200px',				
 			'url' => $this->createUrl('tree')		
 		));

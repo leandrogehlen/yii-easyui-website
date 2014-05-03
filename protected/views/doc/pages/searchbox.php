@@ -1,10 +1,10 @@
 <?php
 /* @var $this SiteController */
 
-$this->pageTitle=Yii::app()->name . ' - Searchbox';
+$this->pageTitle=Yii::app()->name . ' - SearchBox';
 $this->breadcrumbs=array(
 	Yii::t('site', 'Documentation')=> array('index'),		
-	'Searchbox',
+	'SearchBox',
 );
 ?>
 <h1>Searchbox</h1>
@@ -18,7 +18,7 @@ See more details <a href="http://www.jeasyui.com/documentation/searchbox.php">ht
 
 <div class="example">
 <?php
-$this->widget('ext.yii-easyui.widgets.EuiSearchbox', array(
+$this->widget('ext.yii-easyui.widgets.EuiSearchBox', array(
 	'id'=>'sb',
 	'prompt'=> 'Please Input Value',
 	'menu'=>array(
@@ -33,7 +33,7 @@ $this->widget('ext.yii-easyui.widgets.EuiSearchbox', array(
 
 <script type="syntaxhighlighter" class="brush: php; toolbar: false">
 <![CDATA[
-$this->widget('ext.yii-easyui.widgets.EuiSearchbox', array(
+$this->widget('ext.yii-easyui.widgets.EuiSearchBox', array(
     'id'=>'sb',
 	'prompt'=> 'Please Input Value',
 	'menu'=>array(

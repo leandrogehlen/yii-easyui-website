@@ -1,10 +1,10 @@
 <?php
 /* @var $this DocController */
 
-$this->pageTitle=Yii::app()->name . ' - Numberbox';
+$this->pageTitle=Yii::app()->name . ' - NumberBox';
 $this->breadcrumbs=array(
 	Yii::t('site', 'Documentation')=> array('index'),		
-	'Numberbox',
+	'NumberBox',
 );
 ?>
 <h1>Numberbox</h1>
@@ -20,7 +20,7 @@ See more details <a href="http://www.jeasyui.com/documentation/numberbox.php">ht
 	<div class="form">
 		<div>
 		<label>Min 10, Max 100</label>
-		<?php $this->widget('ext.yii-easyui.widgets.EuiNumberbox', array(
+		<?php $this->widget('ext.yii-easyui.widgets.EuiNumberBox', array(
 			'min' => 10,
 			'max' => 100,			
 			'value' => 100		
@@ -28,7 +28,7 @@ See more details <a href="http://www.jeasyui.com/documentation/numberbox.php">ht
 		</div>
 		<div>
 		<label>Prefix</label>
-		<?php $this->widget('ext.yii-easyui.widgets.EuiNumberbox', array(
+		<?php $this->widget('ext.yii-easyui.widgets.EuiNumberBox', array(
 			'prefix' => '€ ',
 			'precision' => 2,
 			'value' => 100		
@@ -36,7 +36,7 @@ See more details <a href="http://www.jeasyui.com/documentation/numberbox.php">ht
 		</div>			
 		<div>
 		<label>Suffix</label>
-		<?php $this->widget('ext.yii-easyui.widgets.EuiNumberbox', array(
+		<?php $this->widget('ext.yii-easyui.widgets.EuiNumberBox', array(
 			'suffix' => ' €',
 			'precision' => 2,
 			'value' => 100		
@@ -53,7 +53,7 @@ See more details <a href="http://www.jeasyui.com/documentation/numberbox.php">ht
 	<div class="form">
 		<div>
 		<label>Min 10, Max 100</label>
-		<?php echo "<?php "?>$this->widget('ext.yii-easyui.widgets.EuiNumberbox', array(
+		<?php echo "<?php "?>$this->widget('ext.yii-easyui.widgets.EuiNumberBox', array(
 			'min' => 10,
 			'max' => 100,			
 			'value' => 100		
@@ -62,7 +62,7 @@ See more details <a href="http://www.jeasyui.com/documentation/numberbox.php">ht
 		</div>
 		<div>
 		<label>Prefix</label>
-		<?php echo "<?php "?>$this->widget('ext.yii-easyui.widgets.EuiNumberbox', array(
+		<?php echo "<?php "?>$this->widget('ext.yii-easyui.widgets.EuiNumberBox', array(
 			'prefix' => '€ ',
 			'precision' => 2,
 			'value' => 100		
@@ -71,7 +71,7 @@ See more details <a href="http://www.jeasyui.com/documentation/numberbox.php">ht
 		</div>			
 		<div>
 		<label>Suffix</label>
-		<?php echo "<?php "?>$this->widget('ext.yii-easyui.widgets.EuiNumberbox', array(
+		<?php echo "<?php "?>$this->widget('ext.yii-easyui.widgets.EuiNumberBox', array(
 			'suffix' => ' €',
 			'precision' => 2,
 			'value' => 100		

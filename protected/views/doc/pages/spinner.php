@@ -26,7 +26,7 @@ See more details:<br/>
 	<div class="form">
 		<div>
 		<label>Number</label>
-		<?php $this->widget('ext.yii-easyui.widgets.EuiNumberspinner', array(
+		<?php $this->widget('ext.yii-easyui.widgets.EuiNumberSpinner', array(
 			'min' => 10,
 			'max' => 100,
 			'increment' => 2					
@@ -34,7 +34,7 @@ See more details:<br/>
 		</div>					
 		<div>
 		<label>Time</label>
-		<?php $this->widget('ext.yii-easyui.widgets.EuiTimespinner', array(
+		<?php $this->widget('ext.yii-easyui.widgets.EuiTimeSpinner', array(
 			'showSeconds' => true					
 		));?>
 		</div>
@@ -49,7 +49,7 @@ See more details:<br/>
 	<div class="form">
 		<div>
 		<label>Number</label>
-		<?php echo "<?php "?>$this->widget('ext.yii-easyui.widgets.EuiNumberspinner', array(
+		<?php echo "<?php "?>$this->widget('ext.yii-easyui.widgets.EuiNumberSpinner', array(
 			'min' => 10,
 			'max' => 100,
 			'increment' => 2					
@@ -58,7 +58,7 @@ See more details:<br/>
 		</div>					
 		<div>
 		<label>Time</label>
-		<?php echo "<?php "?>$this->widget('ext.yii-easyui.widgets.EuiTimespinner', array(
+		<?php echo "<?php "?>$this->widget('ext.yii-easyui.widgets.EuiTimeSpinner', array(
 			'showSeconds' => true					
 		));
 		<?php echo "?>\n" ?>

@@ -1,10 +1,10 @@
 <?php
 /* @var $this DocController */
 
-$this->pageTitle=Yii::app()->name . ' - Treegrid';
+$this->pageTitle=Yii::app()->name . ' - TreeGrid';
 $this->breadcrumbs=array(
 	Yii::t('site', 'Documentation')=> array('index'),		
-	'Treegrid',
+	'TreeGrid',
 );
 ?>
 <h1>Treegrid</h1>
@@ -18,7 +18,7 @@ See more details <a href="http://www.jeasyui.com/documentation/treegrid.php">htt
 
 <div class="example">
 <?php
-$this->widget('ext.yii-easyui.widgets.EuiTreegrid', array(
+$this->widget('ext.yii-easyui.widgets.EuiTreeGrid', array(
 	'style' => 'width:auto; height: 200px',
 	'url' => $this->createUrl('tree'),
 	'idField' => 'id',
@@ -36,7 +36,7 @@ $this->widget('ext.yii-easyui.widgets.EuiTreegrid', array(
 
 <script type="syntaxhighlighter" class="brush: php; toolbar: false">
 <![CDATA[
-$this->widget('ext.yii-easyui.widgets.EuiTreegrid', array(
+$this->widget('ext.yii-easyui.widgets.EuiTreeGrid', array(
 	'style' => 'width:auto; height: 200px',
 	'url' => $this->createUrl('tree'),
 	'idField' => 'id',

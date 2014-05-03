@@ -1,10 +1,10 @@
 <?php
 /* @var $this SiteController */
 
-$this->pageTitle=Yii::app()->name . ' - Splitbutton';
+$this->pageTitle=Yii::app()->name . ' - SplitButton';
 $this->breadcrumbs=array(
 	Yii::t('site', 'Documentation')=> array('index'),		
-	'Splitbuttonbutton',
+	'SplitButton',
 );
 ?>
 <h1>Splitbutton</h1>
@@ -41,12 +41,12 @@ $this->widget('ext.yii-easyui.widgets.EuiMenu', array(
 
 <div style="paddin]]>g:5px;border:1px solid #ddd;">  
 <?php 
-$this->widget('ext.yii-easyui.widgets.EuiSplitbutton', array(
+$this->widget('ext.yii-easyui.widgets.EuiSplitButton', array(
 	'text' => 'File',
 	'menu' => '#mmfile',				
 ));
 
-$this->widget('ext.yii-easyui.widgets.EuiSplitbutton', array(
+$this->widget('ext.yii-easyui.widgets.EuiSplitButton', array(
 	'text' => 'Edit',
 	'menu' => '#mmedit',
 ));
@@ -79,12 +79,12 @@ $this->widget('ext.yii-easyui.widgets.EuiMenu', array(
 
 <div style="padding:5px;border:1px solid #ddd;">  
 <? echo "<?php" ?> 
-$this->widget('ext.yii-easyui.widgets.EuiSplitbutton', array(
+$this->widget('ext.yii-easyui.widgets.EuiSplitButton', array(
 	'text' => 'File',
 	'menu' => '#mmfile',				
 ));
 
-$this->widget('ext.yii-easyui.widgets.EuiSplitbutton', array(
+$this->widget('ext.yii-easyui.widgets.EuiSplitButton', array(
 	'text' => 'Edit',
 	'menu' => '#mmedit',
 ));
